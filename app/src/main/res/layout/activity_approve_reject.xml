@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ApproveRejectActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:id="@+id/firstRelative">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/service"
+                android:id="@+id/admin_service"
+                android:textColor="@color/dark"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="time"
+                android:id="@+id/admin_time"
+                android:layout_toEndOf="@+id/admin_service"
+                android:layout_marginStart="30dp"
+                android:textColor="@color/dark"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="date"
+                android:id="@+id/admin_date"
+                android:layout_below="@+id/admin_time"
+                android:layout_toEndOf="@+id/admin_symptoms"
+                android:layout_marginStart="30dp"
+                android:textColor="@color/dark"
+                android:layout_marginTop="10dp"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/symptoms"
+                android:id="@+id/admin_symptoms"
+                android:layout_below="@+id/admin_service"
+                android:textColor="@color/dark"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reason"
+                android:id="@+id/admin_reason"
+                android:layout_below="@+id/admin_symptoms"
+                android:textColor="@color/dark"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:textSize="15sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="blood"
+                android:id="@+id/admin_blood"
+                android:layout_below="@+id/admin_symptoms"
+                android:layout_toEndOf="@+id/admin_reason"
+                android:layout_marginStart="30dp"
+                android:textColor="@color/dark"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:text="Approve"
+                android:id="@+id/admin_approve"
+                android:layout_below="@+id/admin_reason"
+                android:layout_marginTop="20dp"/>
+
+            <Button
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:backgroundTint="@color/red"
+                android:text="Reject"
+                android:id="@+id/admin_reject"
+                android:layout_below="@+id/admin_reason"
+                android:layout_toEndOf="@+id/admin_approve"
+                android:layout_marginTop="20dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:id="@+id/secondRelative"
+            android:layout_below="@+id/firstRelative"
+            android:visibility="gone">
+            <EditText
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/edit_text"
+                android:hint="To"
+                android:id="@+id/admin_to"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/edit_text"
+                android:padding="10dp"
+                android:hint="Message"
+                android:inputType="textMultiLine"
+                android:id="@+id/admin_message"
+                android:layout_below="@+id/admin_to"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="65dp"
+                android:text="Send"
+                android:layout_centerInParent="true"
+                android:id="@+id/admin_send"
+                android:layout_below="@+id/admin_message"
+                android:layout_marginTop="20dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:id="@+id/thirdRelative"
+            android:layout_below="@+id/firstRelative"
+            android:visibility="gone">
+            <EditText
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@drawable/edit_text"
+                android:text="To"
+                android:id="@+id/admin_to1"
+                android:layout_marginTop="20dp"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:textSize="15sp"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/edit_text"
+                android:padding="10dp"
+                android:hint="Reason for rejection"
+                android:inputType="textMultiLine"
+                android:id="@+id/admin_message1"
+                android:layout_below="@+id/admin_to1"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="65dp"
+                android:text="Send"
+                android:layout_centerInParent="true"
+                android:id="@+id/admin_send1"
+                android:layout_below="@+id/admin_message1"
+                android:layout_marginTop="20dp"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
